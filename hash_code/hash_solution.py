@@ -1,3 +1,8 @@
+"""
+Author : Anoj Kumar
+Email : anoj.kumar48@gmail.com
+"""
+
 LETTER = 'acdegilmnoprstuw' #Global variable
 
 def indexOf(s):
