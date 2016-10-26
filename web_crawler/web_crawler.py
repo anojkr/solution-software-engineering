@@ -26,7 +26,7 @@ def crawl(args):
                 source_code = requests.get(url)
                 plain_text = source_code.text
                 text = BeautifulSoup(plain_text,"html.parser")
-                for t in text.find_all('span',{'class':'productPrice'}):
+                for t in text.find_all('div',{'class':'gridItemTop'}):
                     value +=1
                 print 'Crawling page-'+str(page)+ ' done.'
                 page +=1
@@ -41,7 +41,7 @@ def crawl(args):
         source_code = requests.get(url)
         plain_text = source_code.text
         text = BeautifulSoup(plain_text,  "html.parser")
-        for t in text.find_all('span',{'class':'productPrice'}):
+        for t in text.find_all('div',{'class':'gridItemTop'}):
                 value +=1
         print 'Total no. of results for page ' + str(args[1])+ ' is : '+ str(value)
         return value
